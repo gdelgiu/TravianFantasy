@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0uedthg2avu2"]
+
+[ext_resource type="PackedScene" uid="uid://dx1bsr007n2ho" path="res://Components/HUD/in_game_resource_bar.tscn" id="1_w4fcn"]
+
+[node name="OverworldView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Map" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HudSpan" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldHud" type="Control" parent="HudSpan"]
+layout_mode = 2
+
+[node name="InGameResourceBar" parent="HudSpan/WorldHud" instance=ExtResource("1_w4fcn")]
+layout_mode = 1

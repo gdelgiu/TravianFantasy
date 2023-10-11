@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://753mt0kfs1nj"]
+
+[node name="CP3" type="CollisionPolygon2D"]
+position = Vector2(-748, -250)
+polygon = PackedVector2Array(747, 200, 720, 213, 719, 244, 687, 261, 686, 287, 715, 302, 747, 286, 780, 302, 808, 287, 808, 261, 775, 244, 775, 212)

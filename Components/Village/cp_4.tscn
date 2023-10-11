@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bio74my8ngesg"]
+
+[node name="CP4" type="CollisionPolygon2D"]
+polygon = PackedVector2Array(6.10352e-05, 102, 28, 87, 28, 55, 60, 39, 60, 11, 28, -5, 28, -36, 0, -50, -28, -36, -28, -4.99997, -61, 12, -60.9999, 39, -27.9999, 54, -27.9999, 88)

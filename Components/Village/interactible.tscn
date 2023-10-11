@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ylw486g86jkk"]
+
+[ext_resource type="Script" path="res://Components/interactible.gd" id="1_ipcks"]
+
+[node name="Interactible" type="Area2D"]
+script = ExtResource("1_ipcks")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

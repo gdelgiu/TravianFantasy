@@ -1,0 +1,173 @@
+[gd_scene load_steps=12 format=3 uid="uid://dx1bsr007n2ho"]
+
+[ext_resource type="Texture2D" uid="uid://dsvsg76us6uks" path="res://Assets/imgs/Frontview Batch Battlers/Orc Warlock.png" id="1_cej7c"]
+[ext_resource type="Script" path="res://Components/HUD/in_game_resource_bar.gd" id="1_v8uws"]
+[ext_resource type="Texture2D" uid="uid://d1c1o3kfbaylh" path="res://Assets/imgs/icons/icons.png" id="2_ex550"]
+[ext_resource type="Texture2D" uid="uid://cw6p6ux4cac4p" path="res://Assets/imgs/icons/player_img_frame.png" id="3_lu6m8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnrsg"]
+atlas = ExtResource("1_cej7c")
+region = Rect2(196, 110, 102, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dqin"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_083qi"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d41c5"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u74h"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ixal"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq5ut"]
+resource_local_to_scene = true
+atlas = ExtResource("2_ex550")
+region = Rect2(24, 48, 24, 24)
+
+[node name="InGameResourceBar" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("1_v8uws")
+
+[node name="NavColorBase" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 83.0
+grow_horizontal = 2
+
+[node name="ExternalMargins" type="MarginContainer" parent="NavColorBase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="elements" type="HBoxContainer" parent="NavColorBase/ExternalMargins"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PlayerImage" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+clip_contents = true
+custom_minimum_size = Vector2(51, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_dnrsg")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Frame" type="TextureRect" parent="NavColorBase/ExternalMargins/elements/PlayerImage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lu6m8")
+
+[node name="VillageName" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+layout_mode = 2
+text = "VillageName"
+
+[node name="PInfoToResSeparator" type="VSeparator" parent="NavColorBase/ExternalMargins/elements"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="IconImage" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6dqin")
+stretch_mode = 3
+
+[node name="PeopleLabel" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true
+
+[node name="IconImage2" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_083qi")
+stretch_mode = 3
+
+[node name="ManaLabel" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true
+
+[node name="IconImage3" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_d41c5")
+stretch_mode = 3
+
+[node name="MiasmaLabel" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true
+
+[node name="IconImage4" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_2u74h")
+stretch_mode = 3
+
+[node name="FoodLabel" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true
+
+[node name="IconImage5" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6ixal")
+stretch_mode = 3
+
+[node name="PowerLabel" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true
+
+[node name="ResToPointsSeparator" type="VSeparator" parent="NavColorBase/ExternalMargins/elements"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="IconImage6" type="TextureRect" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(51, 51)
+layout_mode = 2
+texture = SubResource("AtlasTexture_eq5ut")
+stretch_mode = 3
+
+[node name="PowerLabel2" type="Label" parent="NavColorBase/ExternalMargins/elements"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "0000000"
+clip_text = true

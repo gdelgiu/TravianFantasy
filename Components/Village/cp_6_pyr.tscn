@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://coiarxu8fpi47"]
+
+[node name="CP6pyr" type="CollisionPolygon2D"]
+position = Vector2(-161, -113)
+polygon = PackedVector2Array(-1, 68, 30, 52, 63, 68, 90, 54, 90, 28, 59, 12, 59, -21, 25, -38, 24.9999, -68.9999, -2.00006, -82.9999, -29.0001, -69.9999, -28, -38, -62, -21, -62, 12, -94.0001, 28, -93.0001, 54, -67, 67, -35, 51)
